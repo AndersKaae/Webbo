@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>ACCOUNT CREATION</h1>
+    <p>Create new account</p>
+    <form autocomplete="off" action="/createaccount" method="POST" enctype="multipart/form-data">
+        <label for="name">User name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">E-mail</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="password">Password</label><br>
+        <input type="text" id="password" name="password">
+        <button type="submit">Login</button>
+      </form>
+      {{ error }}
+{% endblock content %}

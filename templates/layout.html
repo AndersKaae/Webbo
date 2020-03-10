@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>WEBBO </title>
+        <div>
+            <span>
+                <a href="/">Home</a>
+            </span>
+            <span>
+                <a href="/about">About</a>
+            </span>
+        </div>
+        <div>
+            <span>
+                {% if (cookieUsername == None) %}
+                    <a href="/login">Login</a>
+                    {% else %}
+                    {{ cookieUsername }} <a href="/logout">(Log out)</a>
+                    {% endif %}
+            </span>
+        </div>
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>LOGIN</h1>
+    {% if cookieUsername is sameas None %}
+    <form autocomplete="off" action="/" method="POST" enctype="multipart/form-data">
+        <label for="email">E-mail:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password">
+        <button type="submit">Login</button>
+      </form>
+    </p><a href="/createaccount">Create Account</a></p>
+    {% endif %}
+{% endblock content %}
